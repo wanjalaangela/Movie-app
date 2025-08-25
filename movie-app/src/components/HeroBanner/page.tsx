@@ -3,12 +3,21 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
+interface Movie {
+  id: number;
+  title: string;
+  backdrop_path?: string;
+  poster_path?: string;
+  release_date?: string;
+  overview: string;
+}
+
 const TMDB_API_KEY = process.env.NEXT_PUBLIC_TMDB_API_KEY;
 const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
 const TMDB_IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/original';
 
 export default function HeroBanner() {
-  const [movies, setMovies] = useState<any[]>([]);
+  const [movies, setMovies] = useState<Movie[]>([]);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   useEffect(() => {

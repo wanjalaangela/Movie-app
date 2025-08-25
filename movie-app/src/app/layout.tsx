@@ -2,10 +2,6 @@ import './globals.css';
 import Header from '@/sharedComponents/Header';
 import Footer from '@/sharedComponents/ Footer';
 
-
-
- 
-
 export const metadata = {
   title: 'Moovie',
   description: 'Movie browsing app built with Next.js and TMDB API',

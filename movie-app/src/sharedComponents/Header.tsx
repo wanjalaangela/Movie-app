@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
-export default function Header() {
+export default function Header(): JSX.Element {
   const [search, setSearch] = useState('');
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -26,6 +26,7 @@ export default function Header() {
             className="flex-grow rounded-l-md px-4 py-2 text-black"
             value={search}
             onChange={handleSearchChange}
+            aria-label="Search movies"
           />
           <button
             type="submit"

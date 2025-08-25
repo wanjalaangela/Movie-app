@@ -2,8 +2,17 @@
 import { useState, useEffect } from 'react';
 import { fetchLatestMovies } from '../utils/tmdb';
 
+
+interface Movie {
+  id: number;
+  title: string;
+  release_date: string;
+  overview: string;
+  
+}
+
 export default function useLatestMovies() {
-  const [movies, setMovies] = useState<any[]>([]);
+  const [movies, setMovies] = useState<Movie[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -12,8 +21,12 @@ export default function useLatestMovies() {
       try {
         const data = await fetchLatestMovies();
         setMovies(data);
-      } catch (err) {
-        setError((err as Error).message);
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError(String(err));
+        }
       } finally {
         setLoading(false);
       }
