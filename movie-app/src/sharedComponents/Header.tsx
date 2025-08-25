@@ -1,16 +1,16 @@
 'use client';
 
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { useState } from 'react';
 
-export default function Header(): JSX.Element {
-  const [search, setSearch] = useState('');
+export default function Header(): React.JSX.Element {
+  const [search, setSearch] = useState<string>('');
 
-  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setSearch(e.target.value);
   };
 
-  const handleSearchSubmit = (e: React.FormEvent) => {
+  const handleSearchSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     alert(`You searched for ${search}`);
   };
