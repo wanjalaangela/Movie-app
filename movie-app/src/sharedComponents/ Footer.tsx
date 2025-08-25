@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-400 py-8 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
-        {/* Download Our App */}
+
         <div>
           <h3 className="text-white font-semibold mb-4 flex items-center space-x-2">
             <span className="text-yellow-500 text-2xl font-bold">M</span>
@@ -42,7 +42,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Navigation */}
+
         <div>
           <h4 className="text-white font-semibold mb-4">Navigation</h4>
           <ul className="space-y-2 text-sm">
@@ -52,7 +52,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Legal */}
+     
         <div>
           <h4 className="text-white font-semibold mb-4">Legal</h4>
           <ul className="space-y-2 text-sm">
@@ -62,7 +62,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Contact Us */}
+   
         <div>
           <h4 className="text-white font-semibold mb-4">Contact Us:</h4>
           <p className="text-sm">support@egymovies.com</p>
@@ -92,7 +92,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Share Website Via */}
+      
         <div>
           <h4 className="text-white font-semibold mb-4">Share Website Via:</h4>
           <div className="flex flex-col space-y-3 text-sm">
@@ -114,7 +114,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Footer Bottom */}
+
       <div className="border-t border-gray-800 mt-8 pt-4 text-center text-xs text-gray-500">
         © 2023 Movies. All rights reserved.
       </div>
